@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*Formatos*/
+
+:root{
+    --fuente-inter: "Inter", sans-serif;
+}
+
+/*Formato de pagina*/
+
+body {
+    font-family: var(--fuente-inter);
+    margin: 0;
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    width: 100%;
+}
+    
+.contenido {
+        
+    display: flex;
+    width: 100%;
+}
+
+.contenido_entrada_logo {
+    width: 84px;
+    height:52px;
+
+}
+
+
+.contenido_entrada {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 40px;
+}    
+
+/*Caja de Texto de entrada*/
+
+#contenido_entrada_texto {
+    background: transparent;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    border: none;
+    font-family: var(--fuente-inter);
+    color: #0A3871;
+    font-size: 32px;
+    height: 100%;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+
+/*Formato comentarios*/
+
+.contenido_comentario {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+}
+
+.contenido_comentario_icono {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.contenido_comentario_texto {
+    font-family: var(--fuente-inter);
+    color: #495057;
+    font-size: 12px;
+    margin: 0;
+}
+
+.info {
+    font-family: var(--fuente-inter);
+    color: #495057;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+
+/*Formato de Botones*/
+
+.buttons {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    justify-content: center;
+}
+
+button {
+    font-family: var(--fuente-inter);
+    flex: 1;
+    padding: 24px;
+    border-radius: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 10%;
+}
+
+button:hover{
+    transform: scale(0.9);   
+}
+
+.copiar {
+    background-color: white;
+    color: #2576da;
+    border: 1px solid #2576da;
+    border-radius: 24px;
+    padding: 24px 0;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+
+
+    font-size: 16px;
+    cursor: pointer;
+    width: calc(100% - 64px);
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    right: 32px;
+    margin-top: 10%;
+
+    transition:.3s;
+}
+
+.copiar:hover{
+    background-image: linear-gradient(
+        160deg,
+        #b4f6f8,
+        #D8DFE8,
+        #b4f6f8
+        );
+    border: 1px solid #015169;
+    color: #015169;
+}
+
+#encriptar {
+    background-color: #2576da;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#encriptar:hover {
+    
+    background-image: none;
+    background-color: #015169;
+    color: #b4f6f8;
+}
+
+
+
+#desencriptar {
+    background-color: #D8DFE8;
+    color: #2576da;
+    border: 1px solid #2576da;
+    transition: .2s;
+}
+
+#desencriptar:hover{
+
+    background-image: linear-gradient(
+        160deg,
+        #b4f6f8,
+        #D8DFE8,
+        #b4f6f8
+        );
+    color: #015169;
+    border:1px solid #015169;
+}
+
+#limpiar{
+    background-color: #D8DFE8;
+    color: #2576da;
+    border: 1px solid #2576da;
+    transition: .2s;
+}
+
+#limpiar:hover{
+    background-color: #1391ff;
+    color: #92e7ff;
+    border:1px solid #1dcaff;
+}
+
+/*Formato de Resultado (Salida)*/
+
+.contenido_salida {
+    flex: 1;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+
+    background: transparent;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 32px;
+    padding: 80px;
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
+
+    box-sizing: border-box;
+}
+    
+#contenido_salida_resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.contenido_salida img{
+    width: auto;
+    height: auto;
+    align-content: center;
+}
+
+#contenido_salida_resultado h2 {
+    font-family: var(--fuente-inter);
+    font-size: 24px;
+    font-weight: bold;
+    color: #343A40;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+#contenido_salida_resultado p1 {
+    font-family: var(--fuente-inter);
+    font-size: 16px;
+    text-align: center;
+    color: #495057;
+}
+
+#contenido_salida_resultado p {
+    font-family: var(--fuente-inter);
+    font-size: 24px;
+    text-align: left;
+    color: #495057;
+    height: 100%;
+}
+
+/*Formatos de encriptador para responsiva*/
+
+@media (min-width: 769px){
+    body {
+       background-image: url("Iconos/lines_borlos_style1.png");
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+    .contenido{
+        flex-direction: row;
+    }
+
+    /*Entrada*/   
+    
+    .contenido_entrada {
+        padding-top: 90px;
+    }   
+    
+    #contenido_entrada_texto::placeholder {
+        color: #2582f3;
+    }
+
+    /*Salida*/
+
+    .contenido_salida {
+        width: 20px;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+    body {
+       background-image: url("Iconos/lines_borlos_style3.png");
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+
+    .contenido {
+        flex-direction: column;
+    }
+
+    /*Formato de entrada*/
+
+    .contenido_entrada {
+        padding-top: 20px;
+    }  
+
+    #contenido_entrada_texto::placeholder {
+        color: #7a5105;
+    }
+
+    /*Formato de Salida*/
+
+    .copiar {
+
+        width: calc(100% - 80px);
+        position: relative;
+        top: 60px;
+        left: 32px;
+        right: 32px;
+        /*margin-top: 80px;*/
+
+    }
+
+    .contenido_salida img{
+       width: 0px;
+       height: 0px;
+    }
+       
+  }
+
+  @media (max-width: 375px) {
+
+    body {
+        background-image: url("Iconos/lines_borlos_style4.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+     }
+
+     /*Entrada*/
+
+     #contenido_entrada_texto {
+        height: 300px;
+        resize: none;
+    }
+
+    #contenido_entrada_texto::placeholder {
+        color: #07610c;
+    }
+
+     .buttons {
+        flex-direction: column;
+        margin-top: 5px;
+        margin-bottom: 10%;
+
+    }
+
+    button {
+        font-family: var(--fuente-inter);
+        flex: 1;
+        padding: 10px;
+        border-radius: 24px;
+        font-size: 16px;
+        margin-bottom: 0%;
+    }
+
+    .copiar{
+        width: 100%;
+    }
+
+  }
+
+
+
+
+
